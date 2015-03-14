@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,63 +16,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJe-W0-BHO">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ToDo List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-vm-nFs">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="65J-46-oqI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="AeJ-uT-Urc"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="X4f-dR-DZu"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="hJe-W0-BHO" secondAttribute="centerX" id="43V-jR-JU2"/>
-                            <constraint firstAttribute="centerY" secondItem="hJe-W0-BHO" secondAttribute="centerY" id="Dt8-PB-4dA"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hJe-W0-BHO" secondAttribute="trailing" id="PId-ue-GB7"/>
-                            <constraint firstItem="hJe-W0-BHO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="PhB-w1-1zk"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="65J-46-oqI" secondAttribute="bottom" id="2fe-hq-xhY"/>
+                            <constraint firstAttribute="trailing" secondItem="65J-46-oqI" secondAttribute="trailing" id="Tjl-DE-HY8"/>
                             <constraint firstAttribute="centerX" secondItem="gxc-vm-nFs" secondAttribute="centerX" id="aHe-uh-pmm"/>
-                            <constraint firstItem="hJe-W0-BHO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="eZk-LY-ShG"/>
+                            <constraint firstItem="65J-46-oqI" firstAttribute="top" secondItem="gxc-vm-nFs" secondAttribute="bottom" constant="30" id="aKA-c5-GQR"/>
+                            <constraint firstItem="65J-46-oqI" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="glj-uC-RcV"/>
                             <constraint firstItem="gxc-vm-nFs" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="18" id="h5S-7k-4vd"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="hJe-W0-BHO" secondAttribute="bottom" constant="50" id="mT1-Wk-RMc"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="hJe-W0-BHO"/>
                                 <exclude reference="gxc-vm-nFs"/>
+                                <exclude reference="65J-46-oqI"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="43V-jR-JU2"/>
-                                <exclude reference="Dt8-PB-4dA"/>
-                                <exclude reference="PId-ue-GB7"/>
-                                <exclude reference="PhB-w1-1zk"/>
-                                <exclude reference="eZk-LY-ShG"/>
-                                <exclude reference="mT1-Wk-RMc"/>
                                 <exclude reference="aHe-uh-pmm"/>
                                 <exclude reference="h5S-7k-4vd"/>
+                                <exclude reference="Tjl-DE-HY8"/>
+                                <exclude reference="aKA-c5-GQR"/>
+                                <exclude reference="glj-uC-RcV"/>
+                                <exclude reference="2fe-hq-xhY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="hJe-W0-BHO"/>
                                 <include reference="gxc-vm-nFs"/>
+                                <include reference="65J-46-oqI"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="43V-jR-JU2"/>
-                                <include reference="Dt8-PB-4dA"/>
-                                <include reference="PId-ue-GB7"/>
-                                <include reference="PhB-w1-1zk"/>
-                                <include reference="eZk-LY-ShG"/>
-                                <include reference="mT1-Wk-RMc"/>
                                 <include reference="aHe-uh-pmm"/>
                                 <include reference="h5S-7k-4vd"/>
+                                <include reference="Tjl-DE-HY8"/>
+                                <include reference="aKA-c5-GQR"/>
+                                <include reference="glj-uC-RcV"/>
+                                <include reference="2fe-hq-xhY"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="todoView" destination="hJe-W0-BHO" id="b2Q-pL-sor"/>
+                        <outlet property="todoTableView" destination="65J-46-oqI" id="xmP-jl-s62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
