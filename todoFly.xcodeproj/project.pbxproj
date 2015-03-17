@@ -14,6 +14,7 @@
 		F30D45F71AB330530049E796 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F30D45F51AB330530049E796 /* LaunchScreen.xib */; };
 		F30D46031AB330530049E796 /* todoFlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30D46021AB330530049E796 /* todoFlyTests.swift */; };
 		F30D460D1AB3319C0049E796 /* todoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30D460C1AB3319C0049E796 /* todoModel.swift */; };
+		F3F1CC7C1AB8213600E6EBC2 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F1CC7B1AB8213600E6EBC2 /* AddTodoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		F30D46011AB330530049E796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F30D46021AB330530049E796 /* todoFlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoFlyTests.swift; sourceTree = "<group>"; };
 		F30D460C1AB3319C0049E796 /* todoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todoModel.swift; sourceTree = "<group>"; };
+		F3F1CC7B1AB8213600E6EBC2 /* AddTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				F30D45EC1AB330530049E796 /* AppDelegate.swift */,
 				F30D460C1AB3319C0049E796 /* todoModel.swift */,
+				F3F1CC7B1AB8213600E6EBC2 /* AddTodoViewController.swift */,
 				F30D45EE1AB330530049E796 /* ViewController.swift */,
 				F30D45F01AB330530049E796 /* Main.storyboard */,
 				F30D45F31AB330530049E796 /* Images.xcassets */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F1CC7C1AB8213600E6EBC2 /* AddTodoViewController.swift in Sources */,
 				F30D45EF1AB330530049E796 /* ViewController.swift in Sources */,
 				F30D460D1AB3319C0049E796 /* todoModel.swift in Sources */,
 				F30D45ED1AB330530049E796 /* AppDelegate.swift in Sources */,
@@ -409,6 +413,7 @@
 				F30D46081AB330530049E796 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F30D46091AB330530049E796 /* Build configuration list for PBXNativeTarget "todoFlyTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				F30D460B1AB330530049E796 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
