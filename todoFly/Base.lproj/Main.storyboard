@@ -58,7 +58,7 @@
                     <navigationItem key="navigationItem" id="wdL-Hl-Kaj">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="525-ko-us9">
                             <connections>
-                                <segue destination="W8h-2o-DOw" kind="showDetail" id="6tp-5K-IW5"/>
+                                <segue destination="W8h-2o-DOw" kind="showDetail" identifier="AddTodo" id="6tp-5K-IW5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -107,7 +107,11 @@
                                 <action selector="cancel:" destination="KIe-g7-YOW" id="dGf-4h-C3G"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fHC-Tz-Fti"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fHC-Tz-Fti">
+                            <connections>
+                                <action selector="save:" destination="KIe-g7-YOW" id="Som-Pd-gdg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaK-gq-v1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>

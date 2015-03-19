@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, AddTodoViewControllerDelegate {
 
     
     @IBOutlet weak var todoTableView: UITableView!
@@ -33,21 +33,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var todo1 = Todo(text: "Test1")
-        var todo2 = Todo(text: "Todo2")
+        //var todo1 = Todo(text: "Test1")
+        //var todo2 = Todo(text: "Todo2")
         
-        todo2.status = todoStatus.done
+        //todo2.status = todoStatus.done
         
-        self.todoList.append(todo1)
-        self.todoList.append(todo2)
+        //self.todoList.append(todo1)
+        //self.todoList.append(todo2)
         
         self.todoTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddTodo" {
+            let vc = (segue.destinationViewController as UINavigationController).topViewController as AddTodoViewController
+            vc.addTodoDelegate = self
+        }
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addTodoViewControllerDidCancel(addTodoViewController: AddTodoViewController) {
+        addTodoViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func addTodoViewController(addTodoViewController: AddTodoViewController, todo: Todo) {
+        todoList.append(todo)
+        addTodoViewController.dismissViewControllerAnimated(true, completion: nil)
     }
 
 
